@@ -10,8 +10,10 @@
     "bootstrap": "^4.1.2"
   },
   "scripts": {
-    "prestart": "curl -o src/_data/test.json https://jsonplaceholder.typicode.com/posts",
+    "api-calls": "curl -o src/_data/test.json https://jsonplaceholder.typicode.com/posts",
+    "prestart": "npm run api-calls",
     "start": "bundle exec jekyll serve --port 4000 --livereload",
+    "prebuild": "npm run api-calls",
     "build": "bundle exec jekyll build",
     "clean": "git clean -xdf && npm install"
   },
