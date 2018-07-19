@@ -41,8 +41,10 @@
   </div>
 </footer>
 
+{% if site.data.test %}
 <section>
   {% for post in site.data.test %}
     <div>{{ post.title }}</div>
   {% endfor %}
 </section>
+{% endif %}
