@@ -43,3 +43,17 @@ footer .social {
     color: #4885ed;
   }
 }
+
+// Hours
+footer .hours {
+  .hourline {
+    display: flex;
+    justify-content: space-between;
+    @include media-breakpoint-up(md) {
+      justify-content: flex-start;
+    }
+  }
+  span {
+    width: rem-calc(100);
+  }
+}
