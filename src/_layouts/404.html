@@ -1,0 +1,20 @@
+<!doctype html>
+<html lang="en">
+
+{% include head.html %}
+
+<body>
+  {% include gtm-2.html %}
+
+  <div class="four-o-four" style="background-image: url({{ page.featured-img }});">
+    <div class="box">
+
+      {{ content }}
+
+    </div>
+  </div>
+
+  {% include scripts.html %}
+</body>
+
+</html>

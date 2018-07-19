@@ -1,8 +1,8 @@
 ---
 layout: page
 permalink: /services/rodents
-page-name: Rodent Control
-featured-img: /img/bg-about.jpg
+name: Rodent Control
+featured-img: /img/headers/about.jpg
 excerpt: >-
   Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam, alias.
   Praesentium earum aliquid doloribus aperiam velit quasi,

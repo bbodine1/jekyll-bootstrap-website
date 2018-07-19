@@ -1,8 +1,27 @@
 
 <head>
+	{% include gtm-1.html %}
+	
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 
+<!-- Title -->
+{% if page.layout == 'home' %}
+	<title>{{ site.title }}</title>
+	<meta content='{{ site.title }}' name='title'>
+{% else %}
+	<title>{{ page.name }} - {{ site.title }}</title>
+	<meta content='{{ page.title }} - {{ site.title }}' name='title'>
+{% endif %}
+
+<!-- description -->
+{% if page.layout == 'home' %}
+	<meta property="description" content="{{ site.description }}">
+{% else %}
+	<meta property="description" content="{{ page.description }}">
+{% endif %}
+
+<!-- share -->
 {% if page.share-website %}
 	<meta property="og:url" content="{{ page.share-website }}">
 	<meta property="og:title" content="{{ page.share-title }}">
@@ -17,9 +36,19 @@
 	<meta property="og:type" content="website">
 {% endif %}
 
+<!-- favicon -->
+	<link rel="apple-touch-icon" sizes="180x180" href="/img/favicon/apple-touch-icon.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="/img/favicon/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="/img/favicon/favicon-16x16.png">
+	<link rel="manifest" href="/img/favicon/site.webmanifest">
+	<link rel="mask-icon" href="/img/favicon/safari-pinned-tab.svg" color="#008900">
+	<link rel="shortcut icon" href="/img/favicon/favicon.ico">
+	<meta name="msapplication-TileColor" content="#da532c">
+	<meta name="msapplication-config" content="/img/favicon/browserconfig.xml">
+	<meta name="theme-color" content="#ffffff">
+
+<!-- stylesheets -->
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
 	<link rel="stylesheet" href="{{ "/css/styles.css" | relative_url }}">
 
-	<title>{{ site.title }}</title>
-	<meta property="description" content="{{ site.description }}">
 </head>

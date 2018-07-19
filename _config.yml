@@ -6,6 +6,7 @@ description: >-
   pest solutions and the best prices to protect the things
   you love from pests.
 reviewlimit: 5
+gtm-id:    # XXXXXXX this is the 7 digit google tag manager id number after the GTM-
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site
 
@@ -88,13 +89,12 @@ collections:
     output: true
     permalink: /:path
   reviews:
-    output: true
-    permalink: /review/:title
+    output: false
     
 # Include
-include:
-  - _pages
-  - _reviews
+# include:
+#   - _pages
+#   - _reviews
 
 # Exclude
 # exclude:
